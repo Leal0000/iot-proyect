@@ -1,0 +1,37 @@
+
+<!-- partial:index.partial.html -->
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<br>
+<br>
+
+<div class="login">
+  <h2 class="active" > Code </h2>
+
+  <form [formGroup]="codeForm" (ngSubmit)="code(codeForm.value)" id="login-form" class="form">
+   
+    <span style="line-height: 30px;">
+        We have to send a code of confirmation at this email address <br> " {{email}} "
+    </span>
+
+    <input type="text" class="text" name="username" id="username" formControlName="user">
+     <span>Email</span>
+
+    <br>
+    <br>
+
+    <input type="text" class="text" name="code" id="code" formControlName="code">
+    <span>Code</span>
+
+   
+    
+
+    <button class="signin" type="submit">
+      Verify
+    </button>
+
+
+  
+  </form>
+
+</div>
+

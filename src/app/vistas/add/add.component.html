@@ -1,0 +1,38 @@
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<br>
+<br>
+
+<div class="login">
+  <h2 class="nonactive" (click)="login()"> sign in </h2>
+
+  <h2 class="active"> sign up </h2>
+  <form [formGroup]="createForm" (ngSubmit)="create(createForm.value)" id="login-form" method="post">
+    
+
+    <input type="text" class="text" name="username" id="username" formControlName="user">
+     <span>username</span>
+    <br>
+    
+    <br>
+
+    <input type="password" class="text" name="password" id="password" formControlName="password">
+    <span>password</span>
+    <br>
+    <br>
+
+
+    <input type="password" class="text" name="password">
+    <span>password again</span>
+    <br>
+
+    <button class="signin" type="submit">
+      Sign Up
+    </button>
+
+
+    <hr>
+
+  </form>
+
+</div>
+

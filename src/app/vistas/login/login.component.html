@@ -1,0 +1,45 @@
+
+<!-- partial:index.partial.html -->
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<br>
+<br>
+
+<div class="login">
+  <h2 class="active" > sign in </h2>
+
+  <h2 class="nonactive" (click)="register()"> sign up </h2>
+  <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)" id="login-form" class="form">
+   
+    
+
+    <input type="text" class="text" name="username" id="username" formControlName="user">
+     <span>username</span>
+
+    <br>
+    
+    <br>
+
+    <input type="password" class="text" name="password" id="password" formControlName="password">
+    <span>password</span>
+    <br>
+
+    <label for="">
+        <div class="alert alert-danger" *ngIf="status">
+            <p> {{msg}} </p>
+            <p>Forgot Your password?</p>
+          </div>
+    </label>
+
+    
+    <button class="signin" type="submit">
+      Sign In
+    </button>
+
+
+    <hr>
+
+    <a href="#">Forgot Password?</a>
+  </form>
+
+</div>
+
